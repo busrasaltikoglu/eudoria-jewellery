@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eudoria Jewellery</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasyon Menüsü -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#">Kolyeler</a></li>
+            <li><a href="#">Yüzükler</a></li>
+            <li><a href="#">Küpeler</a></li>
+            <li><a href="#">Bileklikler</a></li>
+        </ul>
+        <div class="nav-cart">
+            <a href="#" id="cart-toggle">Sepetim <span class="cart-count">(0)</span></a>
+        </div>
+    </nav>
+
+    <!-- Ana İçerik Kapsayıcısı -->
+    <main class="main-content">
+        <!-- Header / Logo & Slogan -->
+        <header>
+            <img src="logo.png" alt="Eudoria Jewellery Logo" class="site-logo">
+            <p class="slogan">SEVİNCİNE IŞILTILI BİR HEDİYE</p>
+        </header>
+
+        <!-- Minimal Ürün Kataloğu (Taslak/Örnek) -->
+        <div class="urun-listesi">
+
+            <!-- 1. Ürün -->
+            <div class="urun-karti">
+                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400" alt="Altın Kolye">
+                <h3>Zarif Altın Kolye</h3>
+                <p class="fiyat">450 TL</p>
+                <button class="add-to-cart-btn" data-name="Zarif Altın Kolye" data-price="450" data-img="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400">SEPETE EKLE</button>
+            </div>
+
+            <!-- 2. Ürün -->
+            <div class="urun-karti">
+                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400" alt="Pırlanta Yüzük">
+                <h3>Işıltılı Pırlanta Yüzük</h3>
+                <p class="fiyat">750 TL</p>
+                <button class="add-to-cart-btn" data-name="Işıltılı Pırlanta Yüzük" data-price="750" data-img="https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=400">SEPETE EKLE</button>
+            </div>
+
+            <!-- 3. Ürün -->
+            <div class="urun-karti">
+                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400" alt="Zarif Bileklik">
+                <h3>İnci Detaylı Bileklik</h3>
+                <p class="fiyat">380 TL</p>
+                <button class="add-to-cart-btn" data-name="İnci Detaylı Bileklik" data-price="380" data-img="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400">SEPETE EKLE</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Yan Sepet Paneli (Slide-over Cart) -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h2>Alışveriş Sepeti</h2>
+            <button id="close-cart" class="close-btn">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <p class="empty-cart-msg">Sepetiniz henüz boş.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <span id="cart-total-price">0 TL</span>
+            </div>
+            <button class="checkout-btn">ÖDEMEYE GEÇ</button>
+        </div>
+    </div>
+
+    <!-- Alt Bilgi / Footer -->
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="mailto:eudoriajewellery@gmail.com">eudoriajewellery@gmail.com</a>
+            <a href="https://www.instagram.com/eudoriajewellery" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@eudoriajewellery" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="#">Kargo ve İade</a>
+        </div>
+        <p class="copyright">&copy; 2026 Eudoria Jewellery. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <!-- JavaScript Dosyası -->
+    <script src="script.js"></script>
+</body>
+</html>

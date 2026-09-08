@@ -1,0 +1,365 @@
+/* Genel Sayfa Tasarımı */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfbf7; /* Şık Kırık Beyaz */
+    color: #3d2314; /* Acı Kahve */
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigasyon Menüsü */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(61, 35, 20, 0.08);
+    box-sizing: border-box;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a,
+.nav-cart a {
+    text-decoration: none;
+    color: #3d2314;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-cart a:hover {
+    opacity: 0.6;
+}
+
+.cart-count {
+    font-weight: 500;
+}
+
+/* Ana İçerik Kapsayıcısı */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+/* Header & Logo */
+header {
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+.site-logo {
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Slogan */
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: #3d2314;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Minimal Ürün Kataloğu */
+.urun-listesi {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+}
+
+/* Minimalist Ürün Kartı */
+.urun-karti {
+    background-color: transparent;
+    width: 220px;
+    text-align: left;
+    transition: opacity 0.3s ease;
+}
+
+.urun-karti:hover {
+    opacity: 0.85;
+}
+
+.urun-karti img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.urun-karti h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 12px 0 4px 0;
+    color: #3d2314;
+}
+
+.fiyat {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    color: #3d2314;
+    opacity: 0.8;
+}
+
+/* İnce Acı Kahve Çerçeveli Buton */
+button {
+    background-color: transparent;
+    color: #3d2314;
+    border: 1px solid #3d2314;
+    padding: 10px 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3d2314;
+    color: #fcfbf7;
+}
+
+/* --- YAN SEPET PANELİ STİLLERİ --- */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: -380px;
+    width: 340px;
+    height: 100%;
+    background-color: #fcfbf7;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s ease-in-out;
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.cart-drawer.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(61, 35, 20, 0.1);
+    padding-bottom: 15px;
+}
+
+.cart-header h2 {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #3d2314;
+    padding: 0;
+    width: auto;
+}
+
+.close-btn:hover {
+    background: none;
+    color: #3d2314;
+    opacity: 0.5;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.empty-cart-msg {
+    font-size: 12px;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed rgba(61, 35, 20, 0.1);
+    padding-bottom: 15px;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 4px 0;
+}
+
+.cart-item-price {
+    font-size: 11px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: #a00;
+    font-size: 16px;
+    cursor: pointer;
+    width: auto;
+    padding: 0;
+}
+
+.remove-item:hover {
+    background: none;
+    color: #d00;
+}
+
+.cart-footer {
+    border-top: 1px solid rgba(61, 35, 20, 0.1);
+    padding-top: 20px;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.checkout-btn {
+    background-color: #3d2314;
+    color: #fcfbf7;
+}
+
+.checkout-btn:hover {
+    background-color: #57331e;
+}
+
+/* --- FOOTER (ALT BİLGİ) STİLLERİ --- */
+.site-footer {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border-top: 1px solid rgba(61, 35, 20, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    box-sizing: border-box;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #3d2314;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+}
+
+.copyright {
+    font-size: 10px;
+    color: #3d2314;
+    opacity: 0.5;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Mobil Uyum */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-links {
+        gap: 15px;
+    }
+}
