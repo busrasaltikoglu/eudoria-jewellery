@@ -86,15 +86,28 @@
     <!-- Alt Bilgi / Footer -->
     <footer class="site-footer">
         <div class="footer-links">
-            <a href="mailto:eudoriajewellery@gmail.com">eudoriajewellery@gmail.com</a>
+            <a href="javascript:void(0);" onclick="epostaGoster()" class="eposta-toggle-btn">E-posta Gönder</a>
             <a href="https://www.instagram.com/eudoriajewellery" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="https://www.tiktok.com/@eudoriajewellery" target="_blank" rel="noopener noreferrer">TikTok</a>
             <a href="#">Kargo ve İade</a>
         </div>
+        <div id="eposta-alani" style="display: none; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #3d2314; opacity: 0.8; margin-top: 5px;">
+            eudoriajewellery@gmail.com
+        </div>
         <p class="copyright">&copy; 2026 Eudoria Jewellery. Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- JavaScript Dosyası -->
+    <!-- JavaScript Dosyası ve Mail Gösterme Fonksiyonu -->
+    <script>
+        function epostaGoster() {
+            var alan = document.getElementById("eposta-alani");
+            if (alan.style.display === "none") {
+                alan.style.display = "block";
+            } else {
+                alan.style.display = "none";
+            }
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
